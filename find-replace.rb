@@ -41,7 +41,7 @@ class App
 
   def initialize(subject: `pbpaste`, matcher: ARGV[0] || '')
     self.clipboard = subject
-    self.find_and_replace = (matcher.match(/s\/([^\/]+)\/([^\/]+)\/([a-z]+)?/)).to_a
+    self.find_and_replace = (matcher.match(/s\/([^\/]*)\/([^\/]*)(?:\/([a-z]+))?/)).to_a
   end
 
   def flags
@@ -57,11 +57,11 @@ class App
   end
 
   def find
-    Regexp.new(find_and_replace[1], flags)
+    Regexp.new(find_and_replace[1].to_s, flags)
   end
 
   def replace
-    find_and_replace[2]
+    find_and_replace[2].to_s
   end
 
   def valid?
