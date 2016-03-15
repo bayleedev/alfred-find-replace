@@ -9,4 +9,4 @@ Do you want to remove all the letters from the last thing you copied? `replace s
 
 ## Installation
 
-Download the [alfred workflow](find-replace.alfredworkflow) to get to work!
+Download the latest [workflow](https://github.com/blainesch/alfred-find-replace/releases) to get to work!
